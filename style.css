@@ -209,10 +209,22 @@ html, body {
 .next-card::after {
   content: "🌐";
   position: absolute;
-  right: 15px;
-  top: 15px;
-  font-size: 18px;
-  color: #0b2c6b;
+  right: 12px;
+  top: 12px;
+
+  font-size: 16px;
+
+  background: #0b2c6b;
+  color: white;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
 }
 
 .next-card:hover {
