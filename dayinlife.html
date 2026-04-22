@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Information Analyst - Day in the Life</title>
+<link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="NHS Logo">
+  </div>
+
+  <div class="menu-toggle">☰ Menu</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+  </ul>
+
+</nav>
+
+<section class="hero" style="--hero-image: url('home.jpg');">
+  <div class="hero-overlay">
+    <h1>A Day in the Life</h1>
+    <p>Following an NHS Information Analyst through a real working day.</p>
+  </div>
+</section>
+
+<section class="content-preview">
+
+  <div class="section reveal">
+    <h2>8:30 AM – Starting the day</h2>
+    <p>
+      The day begins by checking emails and reviewing urgent requests from NHS departments.
+      Analysts often receive data queries from hospital managers needing fast answers for decision-making.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>9:00 AM – Data extraction</h2>
+    <p>
+      The analyst accesses NHS databases and extracts patient or performance data.
+      This may include waiting times, bed occupancy, or treatment success rates.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>10:30 AM – Cleaning and preparing data</h2>
+    <p>
+      Raw NHS data is often messy. Analysts clean datasets by removing errors, duplicates, and missing values.
+      This step is essential before any analysis can be done.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>12:00 PM – Building dashboards</h2>
+    <p>
+      Using tools like Power BI or Excel, the analyst creates visual dashboards.
+      These dashboards show trends such as patient waiting times or hospital performance.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>1:00 PM – Lunch break</h2>
+    <p>
+      A short break to reset before the afternoon workload. NHS environments are often fast-paced,
+      so breaks help maintain focus and accuracy.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>2:00 PM – Meeting with NHS staff</h2>
+    <p>
+      Analysts meet with managers, doctors, or department heads to explain findings.
+      Communication is key — data must be translated into simple, actionable insights.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>3:30 PM – Problem solving & analysis</h2>
+    <p>
+      The analyst investigates trends or issues raised earlier in the day.
+      For example, why waiting times increased or why a department is underperforming.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>4:30 PM – Reporting & documentation</h2>
+    <p>
+      Final reports are written and sent to NHS teams.
+      These reports directly influence hospital planning and patient care decisions.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Why this role matters daily</h2>
+    <p>
+      Every single day, NHS Information Analysts help improve healthcare systems.
+      Their work ensures decisions are based on evidence, not guesswork — which directly impacts patient lives.
+    </p>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>
