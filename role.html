@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Information Analyst - Role</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="NHS Logo">
+  </div>
+
+  <div class="menu-toggle">☰ Menu</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+  </ul>
+
+</nav>
+
+<section class="hero" style="--hero-image: url('home.jpg');">
+  <div class="hero-overlay">
+    <h1>The Role of an NHS Information Analyst</h1>
+    <p>Turning healthcare data into decisions that improve lives.</p>
+  </div>
+</section>
+
+<section class="content-preview">
+
+  <div class="section-block reveal">
+    <h2>What is an Information Analyst?</h2>
+    <p>
+      An NHS Information Analyst collects, processes, and interprets healthcare data to support decision-making.
+      Their work ensures hospitals run efficiently and helps improve patient outcomes across the UK.
+    </p>
+  </div>
+
+  <div class="section-block reveal">
+    <h2>What they actually do</h2>
+    <p>
+      Information Analysts take raw hospital data and turn it into meaningful insights.
+      This includes analysing waiting times, patient flow, staffing levels, and treatment outcomes.
+    </p>
+    <p>
+      They do not treat patients directly, but their work influences almost every part of NHS decision-making.
+    </p>
+  </div>
+
+  <div class="section-block reveal">
+    <h2>Day-to-day responsibilities</h2>
+    <ul>
+      <li>Collecting and cleaning NHS healthcare data</li>
+      <li>Building dashboards and reports using tools like Power BI</li>
+      <li>Tracking hospital performance and waiting times</li>
+      <li>Identifying patterns and trends in patient data</li>
+      <li>Supporting managers with evidence-based decisions</li>
+    </ul>
+  </div>
+
+  <div class="section-block reveal">
+    <h2>Where they work</h2>
+    <p>
+      Information Analysts work across NHS hospital trusts, regional health boards, and national data organisations.
+      Their role connects different parts of the healthcare system through data.
+    </p>
+  </div>
+
+  <div class="section-block reveal">
+    <h2>Why this role matters</h2>
+    <p>
+      The NHS depends on data to function efficiently. Without analysts, hospitals would struggle to identify problems in waiting times, staffing, and resource use.
+    </p>
+    <p>
+      Their work directly improves patient care by helping reduce delays and improving hospital planning.
+    </p>
+  </div>
+
+  <div class="section-block reveal">
+    <h2>Tools and skills used</h2>
+    <ul>
+      <li>Excel for data analysis and cleaning</li>
+      <li>SQL for working with databases</li>
+      <li>Power BI for dashboards and visualisation</li>
+      <li>Strong analytical and problem-solving skills</li>
+      <li>Clear communication for explaining data insights</li>
+    </ul>
+  </div>
+
+  <div class="section-block reveal">
+    <h2>Real-world example</h2>
+    <p>
+      If an NHS hospital has long A&E waiting times, an Information Analyst would investigate the data to find the cause.
+      They may discover peak demand hours or staffing shortages.
+    </p>
+    <p>
+      They then present this information in a dashboard so managers can make changes that improve patient flow and reduce delays.
+    </p>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>
