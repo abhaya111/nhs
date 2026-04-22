@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Information Analyst - Impact</title>
+<link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="NHS Logo">
+  </div>
+
+  <div class="menu-toggle">☰ Menu</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+  </ul>
+
+</nav>
+
+<section class="hero" style="--hero-image: url('home.jpg');">
+  <div class="hero-overlay">
+    <h1>Impact of NHS Information Analysts</h1>
+    <p>How data directly improves patient care, efficiency, and decision-making.</p>
+  </div>
+</section>
+
+<section class="content-preview">
+
+  <div class="section reveal">
+    <h2>Overall impact</h2>
+    <p>
+      NHS Information Analysts have a direct impact on how the healthcare system runs.
+      Their work turns raw data into decisions that improve patient outcomes and reduce pressure on services.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Improving patient care</h2>
+    <p>
+      By analysing waiting lists, treatment times, and hospital performance, analysts help identify delays and inefficiencies.
+    </p>
+
+    <ul>
+      <li>Faster diagnosis and treatment pathways</li>
+      <li>Reduced waiting times for patients</li>
+      <li>Better tracking of patient recovery outcomes</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Improving NHS efficiency</h2>
+    <p>
+      Data analysis helps hospitals use staff, equipment, and funding more effectively.
+    </p>
+
+    <ul>
+      <li>Better allocation of hospital beds</li>
+      <li>Optimised staffing schedules</li>
+      <li>Reduced wasted resources</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Supporting decision-making</h2>
+    <p>
+      NHS managers and government departments rely on analysts to make informed decisions.
+      Without accurate data, planning would rely on assumptions instead of evidence.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Before vs After data analysis</h2>
+
+    <p><strong>Before:</strong></p>
+    <ul>
+      <li>Long, unclear waiting lists</li>
+      <li>Unbalanced resource distribution</li>
+      <li>Slow identification of problems</li>
+    </ul>
+
+    <p><strong>After:</strong></p>
+    <ul>
+      <li>Clear visibility of hospital performance</li>
+      <li>Faster response to demand changes</li>
+      <li>Evidence-based healthcare planning</li>
+    </ul>
+
+  </div>
+
+  <div class="section reveal">
+    <h2>National impact</h2>
+    <p>
+      On a larger scale, NHS Information Analysts help shape healthcare policy in the UK.
+      Their insights influence funding decisions, service improvements, and long-term planning.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Why this role matters</h2>
+    <p>
+      Without Information Analysts, the NHS would struggle to manage its massive amount of data.
+      Their work ensures the system is efficient, fair, and focused on patient needs.
+    </p>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>
