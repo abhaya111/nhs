@@ -13,7 +13,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR (SAFE GLOBAL COPY) ================= */
+/* ================= NAVBAR ================= */
 
 .navbar {
   position: fixed;
@@ -40,6 +40,7 @@ html, body {
   height: 50px;
 }
 
+/* desktop nav */
 .nav-links {
   display: flex;
   list-style: none;
@@ -68,14 +69,14 @@ html, body {
   width: 100%;
 }
 
-/* ================= MENU FIX (NO FLOATING TEXT BUG) ================= */
-
+/* IMPORTANT FIX: prevents ghost “Menu” text */
 .menu-toggle {
   display: none;
   color: white;
   font-size: 20px;
   cursor: pointer;
   font-weight: bold;
+  user-select: none;
 }
 
 /* ================= HERO ================= */
@@ -118,7 +119,7 @@ html, body {
   margin-top: 10px;
 }
 
-/* ================= SECTION SYSTEM (FIX FOR BLAND TEXT ISSUE) ================= */
+/* ================= SECTION SYSTEM ================= */
 
 .section {
   max-width: 1000px;
@@ -135,19 +136,17 @@ html, body {
   transition: all 0.7s ease;
 }
 
-/* reveal animation */
 .section.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ================= SECTION TITLES ================= */
+/* ================= TITLES ================= */
 
 .section h2 {
   font-size: 28px;
   color: #0b2c6b;
   margin-bottom: 15px;
-
   position: relative;
 }
 
@@ -182,7 +181,7 @@ html, body {
   font-size: 16px;
 }
 
-/* ================= HIGHLIGHT BOX (FOR IMPORTANT ROLE INFO) ================= */
+/* ================= HIGHLIGHT BOX ================= */
 
 .highlight-box {
   background: linear-gradient(135deg, #0b2c6b, #1d4ed8);
@@ -206,10 +205,13 @@ html, body {
     top: 80px;
     left: 0;
     width: 100%;
+
     background: #0b2c6b;
+
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
     padding: 20px 0;
   }
 
