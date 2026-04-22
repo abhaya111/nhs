@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #111;
+  scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR (SAFE GLOBAL COPY) ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 25px;
+  background: transparent;
+  z-index: 9999;
+  transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: #0b2c6b;
+}
+
+.nav-left img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= MENU FIX (NO FLOATING TEXT BUG) ================= */
+
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  height: 65vh;
+  width: 100%;
+  background: var(--hero-image) center/cover no-repeat;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  background: rgba(0,0,0,0.35);
+  padding: 25px 35px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ================= SECTION SYSTEM (FIX FOR BLAND TEXT ISSUE) ================= */
+
+.section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 50px 30px;
+
+  background: white;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+/* reveal animation */
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= SECTION TITLES ================= */
+
+.section h2 {
+  font-size: 28px;
+  color: #0b2c6b;
+  margin-bottom: 15px;
+
+  position: relative;
+}
+
+.section h2::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 5px;
+  width: 5px;
+  height: 85%;
+  background: #1d4ed8;
+  border-radius: 10px;
+}
+
+/* ================= TEXT ================= */
+
+.section p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* ================= LISTS ================= */
+
+.section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* ================= HIGHLIGHT BOX (FOR IMPORTANT ROLE INFO) ================= */
+
+.highlight-box {
+  background: linear-gradient(135deg, #0b2c6b, #1d4ed8);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #0b2c6b;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .section {
+    margin: 30px 15px;
+    padding: 30px 20px;
+  }
+}
