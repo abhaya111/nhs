@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHS Information Analyst</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="images/logo.png" alt="NHS Logo">
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+  </ul>
+</nav>
+
+<section class="hero" style="--hero-image: url('images/home.jpg');">
+  <div class="hero-overlay">
+    <h1>Information Analyst in the NHS</h1>
+    <p>Turning data into decisions that save lives.</p>
+<p class="hero-subtext">
+This role combines healthcare, data, and technology to improve NHS services and patient outcomes across the UK.
+</p>
+  </div>
+</section>
+
+<section class="snapshot">
+
+  <div class="snapshot-card">
+    <h3>Role Summary</h3>
+    <p>
+      An NHS Information Analyst transforms healthcare data into insights that improve patient care, hospital efficiency, and decision-making.
+    </p>
+  </div>
+
+  <div class="snapshot-card">
+    <h3>Entry Route</h3>
+    <p>
+      Typically requires a degree in data science, mathematics, computing, or health informatics, along with strong analytical skills.
+    </p>
+  </div>
+
+  <div class="snapshot-card">
+    <h3>Core Tools</h3>
+    <p>
+      Excel, SQL, Power BI, statistical analysis, and data visualisation tools are commonly used in this role.
+    </p>
+  </div>
+
+</section>
+
+<section class="content-preview">
+
+  <h2>What is an Information Analyst?</h2>
+  <p>
+    An NHS Information Analyst collects, processes, and interprets healthcare data to support decision-making.
+    Their work ensures hospitals run efficiently and patients receive better care.
+  </p>
+
+  <h2>Key Responsibilities</h2>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>Data Analysis</h3>
+      <p>Examining hospital and patient data to identify trends and issues.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Reporting</h3>
+      <p>Creating dashboards and reports for NHS managers and clinicians.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Performance Tracking</h3>
+      <p>Monitoring waiting times, service efficiency, and outcomes.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Decision Support</h3>
+      <p>Helping healthcare leaders make evidence-based decisions.</p>
+    </div>
+  </div>
+
+  <h2>Impact on the NHS</h2>
+
+  <div class="impact-box">
+    <p>
+      Information Analysts directly improve patient care by reducing waiting times, improving hospital efficiency,
+      and ensuring resources are used effectively across the NHS.
+    </p>
+  </div>
+
+  <h2>Skills Required</h2>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>Technical Skills</h3>
+      <p>Excel, SQL, Power BI, data visualisation, statistics.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Soft Skills</h3>
+      <p>Communication, attention to detail, problem-solving.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Thinking Skills</h3>
+      <p>Critical thinking and interpreting complex datasets.</p>
+    </div>
+  </div>
+
+  <h2>Why This Role Matters</h2>
+
+  <div class="why-matters">
+    <div class="why-card">
+      <h3>Better Patient Care</h3>
+      <p>Data insights help reduce waiting times and improve treatment outcomes.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Smarter Decisions</h3>
+      <p>Hospitals can make evidence-based decisions instead of assumptions.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Efficiency in the NHS</h3>
+      <p>Resources are allocated more effectively, reducing pressure on staff and systems.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>National Impact</h3>
+      <p>Large-scale data analysis helps improve healthcare policies across the UK.</p>
+    </div>
+  </div>
+
+  <h2>Explore Further</h2>
+
+  <div class="next-grid">
+
+    <a href="role.html" class="next-card">
+      <h3>Full Role Breakdown</h3>
+      <p>Understand exactly what an NHS Information Analyst does day-to-day.</p>
+    </a>
+
+    <a href="skills.html" class="next-card">
+      <h3>Skills & Tools</h3>
+      <p>Discover the technical and soft skills needed for success.</p>
+    </a>
+
+    <a href="career.html" class="next-card">
+      <h3>Career Pathway</h3>
+      <p>See how you progress from entry level to senior analyst roles.</p>
+    </a>
+
+    <a href="day.html" class="next-card">
+      <h3>Day in the Life</h3>
+      <p>Follow a real working day of an NHS Information Analyst.</p>
+    </a>
+
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(
+    '.snapshot-card, .info-card, .why-card, .next-card, .impact-box'
+  );
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => {
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+  });
+
+});
+</script>
+
+<span class="globe">🌐</span>
+
+</body>
+</html>
