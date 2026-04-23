@@ -33,36 +33,58 @@
 <section class="hero" style="--hero-image: url('home.jpg');">
   <div class="hero-overlay">
     <h1>Team & Contributions</h1>
-    <p>Showcasing our group work and visual materials created for this project.</p>
+    <p>Group members, responsibilities, and project evidence.</p>
   </div>
 </section>
 
-<!-- POSTERS -->
-<section class="content-preview">
+<!-- POSTER 1 -->
+<section class="section reveal">
 
-  <div class="poster-row reveal">
+  <h2>Poster 1</h2>
+
+  <div class="poster-row">
     <img src="poster1.jpg" alt="Poster 1">
-    <h3>Poster Title 1</h3>
-    <p>This poster explains the role of an NHS Information Analyst and highlights key responsibilities.</p>
+    <h3>Understanding NHS Data Analysis</h3>
+    <p>
+      This poster explains how NHS Information Analysts process and interpret healthcare data to improve patient care.
+    </p>
   </div>
 
-  <div class="poster-row reveal">
+</section>
+
+<!-- POSTER 2 -->
+<section class="section reveal">
+
+  <h2>Poster 2</h2>
+
+  <div class="poster-row">
     <img src="poster2.jpg" alt="Poster 2">
-    <h3>Poster Title 2</h3>
-    <p>This poster focuses on the importance of data in improving patient care and NHS efficiency.</p>
+    <h3>Improving NHS Efficiency</h3>
+    <p>
+      This poster focuses on how data-driven decisions help reduce waiting times and improve hospital performance.
+    </p>
   </div>
 
 </section>
 
 <!-- TEAM DETAILS -->
-<section class="team-section reveal">
+<section class="section reveal">
 
   <h2>Team Details</h2>
 
   <div class="team-box">
-    <p><strong>Members:</strong> A.B, C.D, E.F, G.H</p>
+
+    <p><strong>Members:</strong></p>
+    <p>A.B – Research & content creation</p>
+    <p>C.D – Poster design</p>
+    <p>E.F – Website development</p>
+    <p>G.H – Data & analysis support</p>
+
+    <br>
+
     <p><strong>Form:</strong> [Your Form]</p>
     <p><strong>School:</strong> [Your School Name]</p>
+
   </div>
 
 </section>
@@ -91,11 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
 
-  if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  }
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 
 });
 </script>
