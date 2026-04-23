@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR (MATCH styles.css EXACTLY) ================= */
+
 
 .navbar {
   position: fixed;
@@ -42,7 +42,7 @@ html, body {
   height: 55px;
 }
 
-/* NAV LINKS */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -74,7 +74,7 @@ html, body {
   width: 100%;
 }
 
-/* MENU BUTTON */
+
 .menu-toggle {
   display: none;
   color: white;
@@ -83,7 +83,7 @@ html, body {
   font-weight: 600;
 }
 
-/* ================= HERO ================= */
+
 
 .hero {
   height: 70vh;
@@ -126,7 +126,7 @@ html, body {
   font-size: 18px;
 }
 
-/* ================= SECTION SYSTEM (MAIN DESIGN) ================= */
+
 
 .section {
   max-width: 1100px;
@@ -148,7 +148,7 @@ html, body {
   transform: translateY(0);
 }
 
-/* SECTION TITLE */
+
 .section h2 {
   font-size: 28px;
   color: #0b2c6b;
@@ -167,14 +167,14 @@ html, body {
   border-radius: 10px;
 }
 
-/* TEXT */
+
 .section p {
   font-size: 17px;
   line-height: 1.7;
   margin-bottom: 12px;
 }
 
-/* LISTS */
+
 .section ul {
   padding-left: 20px;
   margin-top: 10px;
@@ -185,7 +185,7 @@ html, body {
   font-size: 16px;
 }
 
-/* HIGHLIGHT BOX */
+
 .highlight-box {
   background: linear-gradient(135deg, #0b2c6b, #1d4ed8);
   color: white;
@@ -194,7 +194,7 @@ html, body {
   margin-top: 20px;
 }
 
-/* ================= POSTER LAYOUT ================= */
+
 
 .poster-row {
   text-align: center;
@@ -215,7 +215,7 @@ html, body {
   margin-bottom: 5px;
 }
 
-/* ================= TEAM BOX ================= */
+
 
 .team-box {
   background: white;
@@ -224,7 +224,7 @@ html, body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* ================= MOBILE ================= */
+
 
 @media (max-width: 950px) {
 
