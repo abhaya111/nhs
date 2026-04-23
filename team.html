@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team & Contributions</title>
+<link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="NHS Logo">
+  </div>
+
+  <div class="menu-toggle">☰ Menu</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+    <li><a href="team.html">Team & Contributions</a></li>
+  </ul>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="--hero-image: url('home.jpg');">
+  <div class="hero-overlay">
+    <h1>Team & Contributions</h1>
+    <p>Showcasing our group work and visual materials created for this project.</p>
+  </div>
+</section>
+
+<!-- POSTERS -->
+<section class="content-preview">
+
+  <div class="poster-row reveal">
+    <img src="poster1.jpg" alt="Poster 1">
+    <h3>Poster Title 1</h3>
+    <p>This poster explains the role of an NHS Information Analyst and highlights key responsibilities.</p>
+  </div>
+
+  <div class="poster-row reveal">
+    <img src="poster2.jpg" alt="Poster 2">
+    <h3>Poster Title 2</h3>
+    <p>This poster focuses on the importance of data in improving patient care and NHS efficiency.</p>
+  </div>
+
+</section>
+
+<!-- TEAM DETAILS -->
+<section class="team-section reveal">
+
+  <h2>Team Details</h2>
+
+  <div class="team-box">
+    <p><strong>Members:</strong> A.B, C.D, E.F, G.H</p>
+    <p><strong>Form:</strong> [Your Form]</p>
+    <p><strong>School:</strong> [Your School Name]</p>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>
