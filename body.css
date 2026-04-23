@@ -15,7 +15,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR (IDENTICAL TO styles.css) ================= */
+/* ================= NAVBAR (MATCH styles.css EXACTLY) ================= */
 
 .navbar {
   position: fixed;
@@ -46,7 +46,7 @@ html, body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 22px;
+  gap: 25px;
 }
 
 .nav-links a {
@@ -126,7 +126,7 @@ html, body {
   font-size: 18px;
 }
 
-/* ================= SECTION SYSTEM ================= */
+/* ================= SECTION SYSTEM (MAIN DESIGN) ================= */
 
 .section {
   max-width: 1100px;
@@ -148,7 +148,7 @@ html, body {
   transform: translateY(0);
 }
 
-/* SECTION TITLES */
+/* SECTION TITLE */
 .section h2 {
   font-size: 28px;
   color: #0b2c6b;
@@ -194,17 +194,16 @@ html, body {
   margin-top: 20px;
 }
 
-/* ================= POSTERS ================= */
+/* ================= POSTER LAYOUT ================= */
 
 .poster-row {
   text-align: center;
-  margin: 60px auto;
-  max-width: 700px;
+  margin: 40px 0;
 }
 
 .poster-row img {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   margin-bottom: 15px;
@@ -212,39 +211,17 @@ html, body {
 
 .poster-row h3 {
   font-size: 20px;
+  color: #0b2c6b;
   margin-bottom: 5px;
-  color: #0b2c6b;
 }
 
-.poster-row p {
-  font-size: 15px;
-}
-
-/* ================= TEAM SECTION ================= */
-
-.team-section {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px 30px;
-  text-align: center;
-}
-
-.team-section h2 {
-  font-size: 28px;
-  color: #0b2c6b;
-  margin-bottom: 20px;
-}
+/* ================= TEAM BOX ================= */
 
 .team-box {
   background: white;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.team-box p {
-  font-size: 16px;
-  margin-bottom: 10px;
 }
 
 /* ================= MOBILE ================= */
